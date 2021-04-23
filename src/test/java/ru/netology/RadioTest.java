@@ -26,6 +26,7 @@ class RadioTest {
         radio.setCurrentRadioStation(11);
         assertEquals(0, radio.getCurrentRadioStation());
     }
+
     @Test
     public void shouldSetRadioStationOverMaxConstructor() {
         Radio radio = new Radio(35);
@@ -62,6 +63,7 @@ class RadioTest {
         radio.setCurrentRadioStationUp();
         assertEquals(22, radio.getCurrentRadioStation());
     }
+
     @Test
     public void shouldChangeRadioStationOverMaxDefault() {
         Radio radio = new Radio();
@@ -116,12 +118,14 @@ class RadioTest {
         radio.setCurrentVolume(101);
         assertEquals(100, radio.getCurrentVolume());
     }
+
     @Test
     public void shouldChangeVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(5);
         assertEquals(5, radio.getCurrentVolume());
     }
+
     @Test
     public void shouldChangeVolumeUnderMin() {
         Radio radio = new Radio();
@@ -136,6 +140,7 @@ class RadioTest {
         radio.setCurrentVolumeUp();
         assertEquals(100, radio.getCurrentVolume());
     }
+
     @Test
     public void setCurrentVolumeUp() {
         Radio radio = new Radio();
